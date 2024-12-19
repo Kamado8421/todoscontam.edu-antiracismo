@@ -1,0 +1,35 @@
+<div>
+  <div class="messages">
+    <div style="padding: 10px"></div>
+    <app-navbar-chat/>
+
+
+    <div *ngFor="let item of messages" [className]="item.isBot ? 'message-bot' : 'message-user'">
+      <p>{{ item.message }}</p>
+      <hr>
+      <span class="hour">{{ item.hours }}</span>
+    </div>
+    
+    <div class="message-bot">
+      <p>Olá, Bom dia!!</p>
+      <hr>
+      <span class="hour">16:27</span>
+    </div>
+    <div class="message-user">
+      <p>Olá, Bom dia!! Que legal estou usando um chat para um ta</p>
+      <hr>
+      <span class="hour">16:27</span>
+    </div>
+    <div class="message-bot">
+      <p>Olá, Bom dia!!</p>
+      <hr>
+      <span class="hour">16:27</span>
+    </div>
+  </div>
+  <form>
+    <input [(ngModel)]="message" type="text" placeholder="mensagem" [value]="message"/>
+    <div (click)="sendMessage()" class="send-icon" style="background-color: var(--primary-color);">
+      <p class="bi bi-sign-turn-right"></p>
+    </div>
+  </form>
+</div>

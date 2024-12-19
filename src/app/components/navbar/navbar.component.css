@@ -1,0 +1,40 @@
+header {
+  width: 100%;
+  border-bottom: 1px solid var(--gray-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  background-color: var(--bg-color);
+
+  & .header-content {
+      width: 90%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px;
+
+      & .mini-logo {
+          color: var(--primary-color);
+          font-size: 25px;
+      }
+
+      & .title-logo {
+          font-size: 20px;
+          font-family: 'Satisfy';
+          color: #fff;
+          font-weight: 600;
+      }
+
+      & #menu-icon {
+          font-size: 25px;
+          font-weight: 800;
+          cursor: pointer;
+          color: var(--primary-color);
+      }
+  }
+
+}
+

@@ -1,0 +1,38 @@
+footer {
+  width: 100%;
+  border-top: 1px solid var(--gray-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+  z-index: 10;
+  background-color: var(--bg-color);
+
+  & .dev-box {
+      display: flex;
+      flex-direction: column;
+      padding: 15px;
+
+      & a {
+          text-decoration: none;
+      }
+
+      & .devname {
+          color: var(--primary-color);
+          font-weight: 600;
+          margin-bottom: 5px;
+          font-size: 12px;
+      }
+
+      & .devfunction {
+          color: var(--gray-color);
+          font-size: 10px;
+      }
+  }
+
+  & .ifma-box span {
+      color: var(--primary-color);
+      font-size: 10px;
+  }
+}
