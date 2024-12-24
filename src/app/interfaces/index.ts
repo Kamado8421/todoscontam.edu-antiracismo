@@ -5,3 +5,8 @@ export interface Message {
   hours: string;
 }
 
+export interface InfoBot {
+  key: string;
+  url: string;
+  training: string;
+}

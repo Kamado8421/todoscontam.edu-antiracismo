@@ -1,35 +1,34 @@
 <div>
-  <div class="messages">
+  <div class="messages" #messagesContainer>
     <div style="padding: 10px"></div>
     <app-navbar-chat/>
 
+    <div class="message-bot">
+      <p>Olá, amigo(a). Prazer, eu sou o Cosme-IA. Se você quiser, estou aqui para falar sobre Racismo Linguístico. Vamos lá!! Quais as suas dúvidas?😉</p>
+      <hr>
+      <span class="hour" style="color: #ffffff50">by Luciano Mendes</span>
+    </div>
 
     <div *ngFor="let item of messages" [className]="item.isBot ? 'message-bot' : 'message-user'">
       <p>{{ item.message }}</p>
       <hr>
       <span class="hour">{{ item.hours }}</span>
     </div>
-    
-    <div class="message-bot">
-      <p>Olá, Bom dia!!</p>
-      <hr>
-      <span class="hour">16:27</span>
-    </div>
-    <div class="message-user">
-      <p>Olá, Bom dia!! Que legal estou usando um chat para um ta</p>
-      <hr>
-      <span class="hour">16:27</span>
-    </div>
-    <div class="message-bot">
-      <p>Olá, Bom dia!!</p>
-      <hr>
-      <span class="hour">16:27</span>
-    </div>
+
   </div>
   <form>
-    <input [(ngModel)]="message" type="text" placeholder="mensagem" [value]="message"/>
+    <input type="text" placeholder="mensagem" name="user-message" id="user-message" [(ngModel)]="message"  [value]="message"/>
     <div (click)="sendMessage()" class="send-icon" style="background-color: var(--primary-color);">
       <p class="bi bi-sign-turn-right"></p>
     </div>
   </form>
+  <script>
+    const messagesBox = document.querySelector('.messages');
+    const sendButton = document.querySelector('.send-icon');
+
+    function scrollChat(){
+      messagesBox.scrollTop = messagesBox.scrollHeight;
+    }
+
+  </script>
 </div>

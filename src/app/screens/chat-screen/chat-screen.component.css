@@ -12,6 +12,7 @@ form {
   bottom: 70px;
   width: 96%;
   margin: auto;
+  background-color: var(--bg-color);
 
   & input {
     width: 98%;
@@ -22,7 +23,7 @@ form {
     border-radius: 8px;
     color: #fff;
     font-size: 16px;
-    background: transparent;
+    background: var(--bg-color);
   }
 
   & .send-icon {
@@ -47,13 +48,15 @@ form {
 .messages {
   display: flex;
   flex-direction: column;
-  height: 80vh;
+  height: 75vh;
   position: fixed;
   top: 20px;
   overflow-y: auto;
+  margin: auto;
+  width: 100%;
 
   & .hour {
-    color: #000000;
+    color: #ffffff;
     font-size: 10px;
     padding: 5px;
     align-self: flex-end;
