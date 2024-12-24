@@ -1,5 +1,5 @@
 nav {
-  background-color: var(--nb-bg-color);
+  background-color: var(--bg-color);
   width: 80%;
   height: 100vh;
   z-index: 193;
@@ -7,6 +7,23 @@ nav {
   position: fixed;
   border-left: 1px solid var(--gray-color);
   transition: left 5s ease;
+
+  & .question {
+    padding-left: 10px;
+    padding-right: 10px;
+
+    & h4 {
+      margin-top: 15px;
+    }
+
+    & .response {
+      color: #ffffffd1;
+      font-size: 12px;
+      text-align: justify;
+      font-weight: 500;
+      margin-top: 20px;
+    }
+  }
 
   & .mini-logo {
       color: var(--primary-color);

@@ -3,13 +3,13 @@
     <div style="padding: 10px"></div>
     <app-navbar-chat/>
 
-    <div class="message-bot">
+    <div class="message-bot animate">
       <p>Olá, amigo(a). Prazer, eu sou o Cosme-IA. Se você quiser, estou aqui para falar sobre Racismo Linguístico. Vamos lá!! Quais as suas dúvidas?😉</p>
       <hr>
       <span class="hour" style="color: #ffffff50">by Luciano Mendes</span>
     </div>
 
-    <div *ngFor="let item of messages" [className]="item.isBot ? 'message-bot' : 'message-user'">
+    <div *ngFor="let item of messages" [className]="item.isBot ? 'message-bot animate box-massage' : 'message-user animate box-massage'">
       <p>{{ item.message }}</p>
       <hr>
       <span class="hour">{{ item.hours }}</span>

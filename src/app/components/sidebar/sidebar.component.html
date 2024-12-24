@@ -1,10 +1,18 @@
 <nav id="sidebar" class="sidebar" [className]="isMenuOpen ? 'open' : 'close'">
   <div class="header-sidebar">
-      <i (click)="actionCloseMenu()" class="bi bi-x-square close-icon"></i>
-      <div style="display: flex; align-items: center; gap: 10px;">
-          <i class="bi bi-fingerprint mini-logo"></i>
-          <div class="title-logo">Todos Contam.edu</div>
-      </div>
+    <i (click)="actionCloseMenu()" class="bi bi-x-square close-icon"></i>
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <i class="bi bi-fingerprint mini-logo"></i>
+      <div class="title-logo">Todos Contam.edu</div>
+    </div>
+  </div>
+  <div class="question">
+    <h4 class="tag">O que é Racismo Linguístico?</h4>
+    <hr style="margin-top: 20px;">
+    <p class="response">Segundo pesquisador, <a style="cursor: pointer;" target="_blank" href="https://www.brasildefato.com.br/2022/05/13/as-linguas-sao-a-base-do-racismo-afirma-pesquisador" style="color: #007bff;" class="tag">Gabriel Nascimento</a>, o racismo linguístico
+      é a manifestação de preconceito racial através da língua, incluindo metáforas racistas, expressões com conotação
+      negativa e políticas linguísticas discriminatórias. Isso naturaliza estereótipos, desvaloriza culturas minoritárias
+      e perpetua discriminação. Combater isso exige conscientização linguística, educação inclusiva, valorização da diversidade
+      e políticas equitativas.</p>
   </div>
 </nav>
-
