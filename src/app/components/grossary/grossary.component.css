@@ -1,0 +1,39 @@
+.glossary-box {
+  margin-top: 30px;
+  width: 90%;
+
+  & .item-glossary {
+    display: flex;
+    flex-direction: column;
+
+    & .action-item-bttn {
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid var(--gray-color);
+      background-color: var(--bg-color);
+      color: var(--gray-color);
+      font-size: 16px;
+      text-align: left;
+      transition: .3s;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 3px;
+    }
+
+    & .action-item-bttn:hover {
+      cursor: pointer;
+      color: var(--primary-color);
+    }
+
+
+    & .description {
+      color: #fff;
+      font-size: 14px;
+      padding: 5px;
+      padding-left: 15px;
+      width: 90%;
+      text-align: justify;
+    }
+  }
+}

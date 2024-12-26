@@ -1,0 +1,12 @@
+<div class="glossary-box">
+  <h2 class="tag">Glossário</h2>
+  <span class="desc">De Luciano Mendes</span>
+  <br>
+  <br>
+  <hr style="border: 1px solid var(--gray-color)">
+  <br>
+  <div class="item-glossary" *ngFor="let item of items">
+    <button (click)="actionGlossary(item.id)" class="action-item-bttn">{{item.title}} <i [className]="item.statusOpen ? 'bi bi-caret-right' : 'bi bi-caret-down'"></i></button>
+    <span *ngIf="item.statusOpen" class="description"><span class="desc" style="font-size: 14px;"><strong>Contexto:</strong></span> {{item.description}}</span>
+  </div>
+</div>

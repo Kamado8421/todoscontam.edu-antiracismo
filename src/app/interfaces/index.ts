@@ -10,3 +10,10 @@ export interface InfoBot {
   url: string;
   training: string;
 }
+
+export interface Glossary {
+  id: number;
+  title: string;
+  description: string;
+  statusOpen: boolean;
+}
