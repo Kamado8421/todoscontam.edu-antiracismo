@@ -10,7 +10,21 @@ import { Router } from '@angular/router';
 export class NavbarChatComponent {
   botname: string = "Cosme-IA";
 
-  constructor(private router: Router){}
+  today: string = '';
+
+  constructor(private router: Router){
+    const date = new Date();
+    const months = [
+      'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho',
+      'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'
+    ]
+
+    let d = date.getDay();
+    let day = d < 10 ? `0${d}` : d
+    let month = date.getMonth();
+
+    this.today = `${day} de ${months[month]} de 2025`;
+  }
 
     closChat() {
       this.router.navigate(['/']);

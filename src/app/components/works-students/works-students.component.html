@@ -4,7 +4,7 @@
   <span class="desc">Não é possível transformar uma sociedade sozinho; colaboração é fundamental!! ^^<br>Pensando nisso, aqui está alguns trabalhos de partilhamento voluntário de outros discentes.</span>
 
   <div class="stories">
-    <div class="story" *ngFor="let story of stories">
+    <div class="story" *ngFor="let story of stories" (click)="openStory(story.id)">
       <div class="overlay">
         <img [src]="story.porfileUrl" [alt]="'Perfil de'+ story.authorName" class="profile"/>
         <span class="studant-name">{{ story.authorName }}</span>
@@ -13,6 +13,6 @@
 
   </div>
 
-  <!-- <app-story-viewer/> -->
+  
 </div>
 <!-- https://diariodocomercio.com.br/wp-content/uploads/2020/12/racismo-combate.jpg -->
