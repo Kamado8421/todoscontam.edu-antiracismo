@@ -17,3 +17,14 @@ export interface Glossary {
   description: string;
   statusOpen: boolean;
 }
+
+export interface Story {
+  id: number;
+  porfileUrl: string;
+  authorName: string;
+  urlCanva: string
+  description: string;
+  folderUrl: string;
+  instagramUrl: string;
+  instagram: string;
+}

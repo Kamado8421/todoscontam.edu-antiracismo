@@ -1,0 +1,45 @@
+.stories {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  position: relative;
+  width: 90%;
+  overflow-x: scroll;
+
+  & .story {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.9)), url('https://diariodocomercio.com.br/wp-content/uploads/2020/12/racismo-combate.jpg');
+    height: 180px;
+    background-color: #1f1f1f;
+    min-width: 100px;
+    max-width: 100px;
+    padding: 10px;
+    border: 2px solid var(--primary-color);
+    border-radius: 25px;
+    background-position: center;
+    background-size: cover;
+
+    & .overlay {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    & .studant-name {
+      color: #fff;
+      font-weight: 700;
+      font-size: 12px;
+    }
+
+    & .profile {
+      height: 35px;
+      width: 35px;
+      border-radius: 50%;
+      object-fit: cover;
+      padding: 2px;
+      border: 1.5px solid var(--primary-color);
+    }
+  }
+}
