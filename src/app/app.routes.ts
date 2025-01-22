@@ -7,6 +7,6 @@ import { StoryViewerComponent } from './components/story-viewer/story-viewer.com
 export const routes: Routes = [
   {path: '', component: LandingPageComponent},
   {path: 'chat', component: ChatScreenComponent},
-  {path: 'viewer/:id', component: StoryViewerComponent},
+  {path: 'viewer/Luciano', component: StoryViewerComponent},
 ];
 

@@ -19,7 +19,7 @@ export class NavbarChatComponent {
       'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'
     ]
 
-    let d = date.getDay();
+    let d = date.getDay() + 19;
     let day = d < 10 ? `0${d}` : d
     let month = date.getMonth();
 

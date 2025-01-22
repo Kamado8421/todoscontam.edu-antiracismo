@@ -56,7 +56,7 @@ export class ChatScreenComponent {
   private async getResponseBot(text: string) {
     if (!text) throw new Error('Mensagem para obter resposta do bot está nula.');
 
-
+/*
     const data: Message = {
       id: this.message.length + 1,
       message: '👨‍💻 Digitando...',
@@ -74,7 +74,18 @@ export class ChatScreenComponent {
       if (m.id === data.id) {
         m.message = result;
       }
-    });
+    });*/
+
+    const result = await reqGeminiGoogle(text, this.messages);
+
+    const data: Message = {
+      id: this.message.length + 1,
+      message: await result,
+      isBot: true,
+      hours: this.getHours()
+    }
+
+    this.addMessageChat(data);
 
 
     this.isBotTyping = false;

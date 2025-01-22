@@ -9,25 +9,26 @@ import { stories } from '../../../data/base';
   selector: 'app-story-viewer',
   imports: [],
   templateUrl: './story-viewer.component.html',
-  styleUrl: './story-viewer.component.css'
+  styleUrls: ['./story-viewer.component.css']
 })
 export class StoryViewerComponent {
 
   stories: Story[] = stories;
-  story: any = null;
+  story: Story | undefined;
 
-  constructor(private router: Router, private route: ActivatedRoute){}
+  constructor(private router: Router, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    const id = this.route.snapshot.paramMap.get('id') || 0;
+    this.route.params.subscribe(params => {
+      const id = params['id'];
 
-    this.story = this.stories.find(s => s.id == id);
+      this.story = this.stories.find(s => s.id == id);
 
-    if (!this.story) {
-      alert('Não foi possível encontrar essa publicação! ')
-      this.onBack();
-    }
-
+      if (!this.story) {
+        alert('Não foi possível encontrar essa publicação! ')
+        this.onBack();
+      }
+    });
   }
 
   onBack(){
