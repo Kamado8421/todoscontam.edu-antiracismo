@@ -40,7 +40,7 @@ export async function reqGeminiGoogle(query: string, messages: Message[]): Promi
       result = response.data.candidates[0].content.parts[0].text;
     })
     .catch(error => {
-      result = 'Tive um prolema ao processar a reposta ☹️';
+      result = 'Tive um prolema ao processar a reposta ☹️\nMeus Desenvolvedores podem ter me desativado ou houve algum problema interno!! Contate @luciano_mendesz9 (Instagram)';
       console.error(error);
     });
 
